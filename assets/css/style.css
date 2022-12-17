@@ -18,7 +18,7 @@
   /* set content highlight color and background */
   ::selection {
     background-color: var(--bright-turquoise);
-    color: var(--bgcolor);
+    color: var(--color1);
   }
   
   * {
@@ -49,35 +49,35 @@
   h5,
   h6 {
     margin: 0;
-    margin-bottom: 0.625rem;
-    color: var(--heliotrope);
-    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--fontvintage);
+    font-weight: 400;
     line-height: 1.1;
   }
   
   h1 {
     /* 4rem = 40px (4 * 10px) */
-    font-size: 4rem;
-  }
-  
-  h2 {
-    font-size: 3.5rem;
-  }
-  
-  h3 {
     font-size: 3rem;
   }
   
-  h4 {
+  h2 {
     font-size: 2.5rem;
   }
   
-  h5 {
+  h3 {
     font-size: 2rem;
   }
   
-  h6 {
+  h4 {
     font-size: 1.5rem;
+  }
+  
+  h5 {
+    font-size: 1rem;
+  }
+  
+  h6 {
+    font-size: 0.5rem;
   }
   
   p {
@@ -102,6 +102,14 @@
     margin: 2rem auto;
   }
   
+  ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+}
+
   footer {
     margin: 1.5rem;
     text-align: center;
@@ -115,17 +123,8 @@
   flex-wrap: wrap;
 }
 
-.allPortfolio {
-  /* flex items */
-  display: flex;;
-  align-items: flex-end;
-  flex-basis: calc(50% - 1em);
-  margin: 0.5em;
-  min-height: 150px;
-}
-
 .portfolio1 {
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/webdevelop[er_peiwang_havetimedrinktea.png");
   border: solid 2px var(--color1) groove;
 }
 
@@ -147,22 +146,47 @@
   border: solid 2px var(--color4)  groove;
 }
 
-.flex_items div {
+.portfolio_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio_flex_item {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: calc(50% - 1em);
+  margin: 0.5em;
+  min-height: 150px;
+  background-color: var(--color5);
+  padding: 10px;
+}
+
+.portfolio_flex_item div {
   background-color: var(--color3);
   padding: 10px;
+}
+
+.portfolio_flex_item:first-child {
+  min-height: 300px;
+  flex-basis: 100%;
+}
+
+.portfolio_flex_item a {
+  cursor: grab;
 }
 
   /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (max-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
+    .portfolio_flex_item {
+      flex-basis: 100%; /* as opposed to calc(50% - 1em */
     }
   
     /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
-      flex-grow: 1;
+    .portfolio_flex_item:first-child {
+      min-height: 150px;
     }
   }
   
