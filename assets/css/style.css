@@ -1,15 +1,24 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
+    --bgcolor:#666666;
+    --color1: #fcbc3c;
+    --color2: #f4f491;
+    --color3: #548434;
+    --color4: #a45c84;
+    --color5: #c4be81;
+    --color6: #54402c;
     --outer-space: #33393f;
     --bright-turquoise: #2aefcb;
-    --gin: #e0eae4;
+    --fontvintage: #e0eae4;
     --heliotrope: #e866ec;
+    --proj-select: #2aefcb;
+    --proj-nonselect: #5318a0;
   }
 
   /* set content highlight color and background */
   ::selection {
     background-color: var(--bright-turquoise);
-    color: var(--outer-space);
+    color: var(--bgcolor);
   }
   
   * {
@@ -25,8 +34,8 @@
     /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
     font-size: 1.75rem;
     line-height: 1.5;
-    color: var(--gin);
-    background-color: var(--outer-space);
+    color: var(--fontvintage);
+    background-color: var(--bgcolor);
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -76,14 +85,6 @@
   }
 
   
-  code {
-    /* Monospace font stack is used for our code blocks to make it look more like code */
-    font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-      'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-      'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
-      monospace;
-  }
-  
   header {
     width: 96%;
     margin: 0 auto;
@@ -106,13 +107,53 @@
     text-align: center;
   }
 
+/* flex container */
+#work {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+.allPortfolio {
+  /* flex items */
+  display: flex;;
+  align-items: flex-end;
+  flex-basis: calc(50% - 1em);
+  margin: 0.5em;
+  min-height: 150px;
+}
 
+.portfolio1 {
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: solid 2px var(--color1) groove;
+}
 
+.portfolio2 {
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: solid 2px var(--color4) groove;
+}
 
+.portfolio3 {
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: solid 2px var(--color4) groove;
+}
+.portfolio4 {
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: solid 2px var(--color4)  groove;
+}
+.portfolio5 {
+  background-image: url("../images/02-portfolio-2.jpg");
+  border: solid 2px var(--color4)  groove;
+}
+
+.flex_items div {
+  background-color: var(--color3);
+  padding: 10px;
+}
 
   /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .card-column {
       flex: 0 0 50%;
@@ -126,14 +167,10 @@
   }
   
   /* media query for larger screens */
-  @media screen and (min-width: 992px) {
-    header {
-      width: 75%;
-    }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }
+  @media screen and (max-width: 480px) {
+  .flex_items:first-child {
+    min-height: 300px;
+    flex-basis: 100%;
+  }
   }
   
