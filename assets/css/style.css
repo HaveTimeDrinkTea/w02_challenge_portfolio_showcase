@@ -1,6 +1,7 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
     --bgcolor:#666666;
+    --bgcolordark:#313138;
     --bgcolorlight: #edc9c9;
     --color1: #fcbc3c;
     --color2: #f4f491;
@@ -46,19 +47,22 @@
   
 
   header {
-    height: 68vh;
+    height: 70vh;
     width: 100vw;
     overflow: hidden;
     position: relative;
     background: var(--bgcolor);
     display: flex;
     align-items: center;
+    border-bottom: solid 1rem var(--fontvintage);
+    box-shadow: 0 5px 20px var(--bgcolordark);
 }
 
 header nav {
   z-index: 7;
   position: absolute;
-  right: 5%;
+  right: 4vw;
+  top: 3.3vh;
   text-align: right;
 }
 
@@ -120,20 +124,21 @@ header nav {
   }
   
   header p {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-left: 5rem;
     z-index: 8;
   }
+
 
   p {
     margin: 0;
   }
 
 
-  header h1.page-title {
+  /* header h1.page-title {
     padding: 1rem 1.2rem;
     font-size: 4.5rem;
-  }
+  } */
   
   a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
@@ -142,26 +147,37 @@ header nav {
   }
 
 
-  ul.topnavul {
+  ul.topnavul, ul.topnavsmul {
     list-style-type: none;
   }
 
-  ul.topnavul li.topnavli,
-  ul.topnavul li.topnavsmli
+  ul.topnavul li.topnavli
   {
     font-size: 5rem;
+    display: block;
+  }
+
+  ul.topnavsmul li.topnavsmli
+  {
+    font-size: 6rem;
+    display: inline;
   }
 
   ul.topnavul li.topnavli a:hover, 
   ul.topnavul li.topnavli a:active,
-  ul.topnavul li.topnavsmli a:hover, 
-  ul.topnavul li.topnavsmli a:active {
+  ul.topnavsmul li.topnavsmli a:hover, 
+  ul.topnavsmul li.topnavsmli a:active {
     cursor: grab;
     color: #fff;
     background-color: var(--color9);
     padding-right: 10px;
   }
-
+  
+ 
+  ul.topnavsmul li.topnavsmli a:active {
+    display: inline;
+    font-size: 10rem;
+  }
   ul.topnavul li.topnavli a:hover::before {
     background-color: var(--color9); 
     color: #fff;
@@ -254,7 +270,7 @@ header nav {
  .blob {
    position: absolute;
    top: -75vh;
-   left: -50vh;
+   left: -50vw;
    fill: var(--color7);
    width: 50vmax;
    z-index: 5;
@@ -274,14 +290,14 @@ header nav {
  
  .blob2 {
    position: relative;
-   top: -95vh;
-   right: -20vh;
+   top: -150vh;
+   right: -20vw;
    fill: var(--color7);
    width: 60vmax;
-   z-index: 6;
+   z-index: 4;
    animation: move2 10s ease-in-out infinite;
    transform-origin: 50% 0%;
-   opacity: 90%
+   opacity: 70%
  }
  
  @keyframes move2 {
@@ -296,10 +312,10 @@ header nav {
  .blob3 {
    position: absolute;
    bottom: 95vh;
-   left: 20vh;
+   left: 20vw;
    fill: var(--color7);
    width: 60vmax;
-   z-index: 2;
+   z-index: 5;
    animation: move3 10s ease-in-out infinite;
    transform-origin: 20% 0%;
    opacity: 80%;
@@ -343,8 +359,8 @@ header nav {
   justify-content: right;
   padding-top: 2rem;
   padding-right: 2rem;
-  border-right: dashed  0.5rem var(--color9);
-
+  border-right: solid  0.5rem var(--fontvintage);
+  box-shadow: 5px 0 20px var(--bgcolordark);
 }
 
 .flex_item_right {
@@ -498,6 +514,7 @@ header nav {
   /* media query for smaller screens */
   @media screen and (max-width: 480px) {
 
+
   /* make first project double the size */
     .flex_items:first-child {
     min-height: 300px;
@@ -505,27 +522,74 @@ header nav {
   }
 
   /* make mobile nav */
+  header {
+    height: 35vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background: var(--bgcolor);
+    /* display: flex;
+    align-items: center; */
+}
+
 
 header nav {
   z-index: 12;
   position: absolute;
-  width: 100 vw;
+  width: 100vw;
   top: 0;
-  margin: 0 auto;
+  height: 8vh;
+  margin: 0;
+  padding: 0;
+  right: 0vw;
   text-align: center;
+  opacity: 90%;
   background-color: var(--color7);
 }
 
+h1, h1.h1FN, h1.h1LM {
+  top: 5vh;
+  width: 100vw;
+  padding-left: 3vw;
+  font-size: 10vmin;
+}
+
+.name_tagline {
+  margin: 0 auto;
+  text-align: left;
+  top: 4vh;
+  width: 100vw;
+  padding-left: 3vw;
+  z-index: 15;
+}
+
+header p {
+  font-size: 2rem;
+  padding-top: 3vh;
+  padding-left: 3vw;
+  bottom: 10vh;
+  z-index: 8;
+}
+
+h2 {
+  font-size: 8vim;
+  top: 5vh;
+  margin: 0;
+  padding: 10px;
+}
 ul.topnavul {
   list-style-type: none;
+  back
 }
 
 ul.topnavul li.topnavli,
 ul.topnavul li.topnavsmli
 {
   font-size: 2rem;
-  padding: 10px;
   display: inline;
+  padding: 0.8rem;
+  margin: 0.8rem;
+  background-color: var(--color7) ;
 }
 
 ul.topnavul li.topnavli a:hover, 
@@ -534,14 +598,56 @@ ul.topnavul li.topnavsmli a:hover,
 ul.topnavul li.topnavsmli a:active {
   cursor: grab;
   color: var(--fontvintage);
-  background-color: var(--color1);
-  padding-right: 10px;
+  background-color: var(--color9);
+  padding: 0.6rem;
 }
 
 ul.topnavul li.topnavli a:hover::before {
-  background-color: var(--color1); 
-  color: var(--fontvintage);
+  content: none;
 }
 
+/* ul.topnavul li.topnavli a:hover::before {
+  background-color: var(--color9); 
+  color: #fff;
+  content: "❣❣❣";
+  display: inline-block;
+  font-size: 2.5rem;
+  padding-right: 5px;
+  padding-left: 10px
+} */
+
+
+
+
+.blob_container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+ }
+
+ .blob {
+  position: absolute;
+  top: -60vh;
+  left: -20vw;
+  fill: var(--color7);
+  width: 30vmax;
+  z-index: 5;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  opacity: 90%
+}
+
+
+.blob3 {
+  position: absolute;
+  bottom: 70vh;
+  left: 20vw;
+  fill: var(--color7);
+  width: 50vmax;
+  z-index: 2;
+  animation: move3 10s ease-in-out infinite;
+  transform-origin: 30% 0%;
+  opacity: 80%;
+}
   }
   
