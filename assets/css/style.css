@@ -1,6 +1,7 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
     --bgcolor:#666666;
+    --bgcolorlight: #edc9c9;
     --color1: #fcbc3c;
     --color2: #f4f491;
     --color3: #548434;
@@ -98,7 +99,7 @@ header nav {
   h2 {
     font-size: 5vmin;
     padding-left: 5rem;
-    z-index: 10;
+    z-index: 3;
     position: relative;
   }
   
@@ -457,15 +458,32 @@ header nav {
   color: var(--color5);
 }
 
+
+/* .burger-nav {
+  display: block;
+  position: absolute;
+  top: 10vh;
+  left: 50vw;
+  height: 20vh;
+  width: 100wv;
+  background-image: url("../images/burger-nav.png") no-repeat 98% center;
+  background-color: var(--color8);
+  cursor: grab;
+  z-index: 12;
+} */
+
+
+
+
   /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
   @media (prefers-reduced-motion: reduce) {
     header, #blob_container {
       animation: fade 0.5s ease-in both;
     }
   }
-@media (reduced)
 
-  @media screen and (max-width: 768px) {
+
+  @media screen and (max-width: 744px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .portfolio_flex_item {
       flex-basis: 100%; /* as opposed to calc(50% - 1em */
@@ -477,11 +495,53 @@ header nav {
     }
   }
   
-  /* media query for larger screens */
+  /* media query for smaller screens */
   @media screen and (max-width: 480px) {
-  .flex_items:first-child {
+
+  /* make first project double the size */
+    .flex_items:first-child {
     min-height: 300px;
     flex-basis: 100%;
   }
+
+  /* make mobile nav */
+
+header nav {
+  z-index: 12;
+  position: absolute;
+  width: 100 vw;
+  top: 0;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--color7);
+}
+
+ul.topnavul {
+  list-style-type: none;
+}
+
+ul.topnavul li.topnavli,
+ul.topnavul li.topnavsmli
+{
+  font-size: 2rem;
+  padding: 10px;
+  display: inline;
+}
+
+ul.topnavul li.topnavli a:hover, 
+ul.topnavul li.topnavli a:active,
+ul.topnavul li.topnavsmli a:hover, 
+ul.topnavul li.topnavsmli a:active {
+  cursor: grab;
+  color: var(--fontvintage);
+  background-color: var(--color1);
+  padding-right: 10px;
+}
+
+ul.topnavul li.topnavli a:hover::before {
+  background-color: var(--color1); 
+  color: var(--fontvintage);
+}
+
   }
   
