@@ -459,10 +459,11 @@ header nav {
 
   /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
   @media (prefers-reduced-motion: reduce) {
-    h2 {
+    header, #blob_container {
       animation: fade 0.5s ease-in both;
     }
   }
+@media (reduced)
 
   @media screen and (max-width: 768px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
