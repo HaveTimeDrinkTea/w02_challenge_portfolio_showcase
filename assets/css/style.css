@@ -1,6 +1,8 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
     --bgcolor:#666666;
+    --bgcolordark:#313138;
+    --bgcolorlight: #edc9c9;
     --color1: #fcbc3c;
     --color2: #f4f491;
     --color3: #548434;
@@ -16,8 +18,8 @@
 
   /* set content highlight color and background */
   ::selection {
-    background-color: var(--color9);
-    color: var(--color5);
+    background-color: var(--color5);
+    color: var(--color6);
   }
   
 
@@ -45,19 +47,22 @@
   
 
   header {
-    height: 68vh;
+    height: 70vh;
     width: 100vw;
     overflow: hidden;
     position: relative;
     background: var(--bgcolor);
     display: flex;
     align-items: center;
+    border-bottom: solid 1rem var(--fontvintage);
+    box-shadow: 0 5px 20px var(--bgcolordark);
 }
 
 header nav {
   z-index: 7;
   position: absolute;
-  right: 5%;
+  right: 4vw;
+  top: 3.3vh;
   text-align: right;
 }
 
@@ -98,7 +103,7 @@ header nav {
   h2 {
     font-size: 5vmin;
     padding-left: 5rem;
-    z-index: 10;
+    z-index: 3;
     position: relative;
   }
   
@@ -107,7 +112,7 @@ header nav {
   }
   
   h4 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   
   h5 {
@@ -119,20 +124,17 @@ header nav {
   }
   
   header p {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-left: 5rem;
     z-index: 8;
   }
 
+
   p {
     margin: 0;
+    font-size: 2rem;
   }
 
-
-  header h1.page-title {
-    padding: 1rem 1.2rem;
-    font-size: 4.5rem;
-  }
   
   a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
@@ -141,26 +143,37 @@ header nav {
   }
 
 
-  ul.topnavul {
+  ul.topnavul, ul.topnavsmul {
     list-style-type: none;
   }
 
-  ul.topnavul li.topnavli,
-  ul.topnavul li.topnavsmli
+  ul.topnavul li.topnavli
   {
     font-size: 5rem;
+    display: block;
+  }
+
+  ul.topnavsmul li.topnavsmli
+  {
+    font-size: 6rem;
+    display: inline;
   }
 
   ul.topnavul li.topnavli a:hover, 
   ul.topnavul li.topnavli a:active,
-  ul.topnavul li.topnavsmli a:hover, 
-  ul.topnavul li.topnavsmli a:active {
+  ul.topnavsmul li.topnavsmli a:hover, 
+  ul.topnavsmul li.topnavsmli a:active {
     cursor: grab;
     color: #fff;
     background-color: var(--color9);
     padding-right: 10px;
   }
-
+  
+ 
+  ul.topnavsmul li.topnavsmli a:active {
+    display: inline;
+    font-size: 10rem;
+  }
   ul.topnavul li.topnavli a:hover::before {
     background-color: var(--color9); 
     color: #fff;
@@ -253,7 +266,7 @@ header nav {
  .blob {
    position: absolute;
    top: -75vh;
-   left: -50vh;
+   left: -50vw;
    fill: var(--color7);
    width: 50vmax;
    z-index: 5;
@@ -273,14 +286,14 @@ header nav {
  
  .blob2 {
    position: relative;
-   top: -95vh;
-   right: -20vh;
+   top: -150vh;
+   right: -20vw;
    fill: var(--color7);
    width: 60vmax;
-   z-index: 6;
+   z-index: 4;
    animation: move2 10s ease-in-out infinite;
    transform-origin: 50% 0%;
-   opacity: 90%
+   opacity: 70%
  }
  
  @keyframes move2 {
@@ -295,10 +308,10 @@ header nav {
  .blob3 {
    position: absolute;
    bottom: 95vh;
-   left: 20vh;
+   left: 20vw;
    fill: var(--color7);
    width: 60vmax;
-   z-index: 2;
+   z-index: 5;
    animation: move3 10s ease-in-out infinite;
    transform-origin: 20% 0%;
    opacity: 80%;
@@ -321,17 +334,20 @@ header nav {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-wrap: wrap;
   width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .flex {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 6rem;
+  padding: 0;
+  margin-bottom: 4rem;
 }
 
 
@@ -339,11 +355,11 @@ header nav {
   display: flex;
   width: 20vw; 
   position: relative;
-  justify-content: right;
+  justify-content: flex-end;
   padding-top: 2rem;
   padding-right: 2rem;
-  border-right: dashed  0.5rem var(--color9);
-
+  border-right: solid  0.5rem var(--fontvintage);
+  box-shadow: 5px 0 20px var(--bgcolordark);
 }
 
 .flex_item_right {
@@ -353,6 +369,107 @@ header nav {
   justify-content: left; 
   padding-left: 2rem;
   padding-right: 5rem;
+}
+
+.flex_item_right_contact {
+  width: 80vw;
+  justify-content: left; 
+  padding-left: 2rem;
+  padding-right: 5rem;
+}
+
+form {
+  text-align: left;
+  padding-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: auto;
+  color: var(--fontvintage);
+  background-color: var(--color3);
+  border: solid 1px var(--fontvintage);
+  border-radius: 8px;
+  box-shadow: 1px 4px var(--bgcolordark);
+}
+
+.button:hover {background-color: var(--color4)}
+
+.button:active {
+  background-color: var(--color3);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.contact_container {
+  display: flex;
+  justify-content: flex_left;
+  align-content: center;
+}
+
+.avatar {
+  width: 12vw;
+  height: 12vw;
+  float: left; 
+  padding: 0px 0px 0px 0px;
+  margin: 2vw;
+  background-color: var(--color3);
+  border-radius: 60%;
+  border: solid  0.5rem var(--fontvintage);
+  box-shadow: 5px 0 20px var(--bgcolordark);
+  /* opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden; */
+}
+
+.avatar_image {
+  opacity: 1;
+  display: block;
+  width: 12vw;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.avatar_container {
+  position: relative;
+  width: 50%;
+  cursor: grab;
+}
+
+.avatar_middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  /* top: 50%;
+  left: 50%;  */
+  /* transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+}
+
+.avatar_container:hover .avatar_image {
+  opacity: 1;
+}
+
+.avatar_container:hover .avatar_middle {
+  opacity: 1;
+}
+
+
+
+
+.disclaimer {
+  font-size: 0.7em;
+  margin: 0;
+  padding: 0;
 }
 
 /* formattting the left side of each section */
@@ -366,14 +483,22 @@ header nav {
   background-color: var(--color7);
 }
 
-
-
 .contact_format {
   background-color: #548434;
 }
 
+.opener {
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--color1);
+}
 
-/* Portfolio lex container */
+
+
+/* ----------------------------------- 
+Portfolio flex container 
+--------------------------------------*/
+
 #portfolio {
   display: flex;
   flex-direction: row;
@@ -381,36 +506,30 @@ header nav {
   flex-wrap: wrap;
 }
 
-.portfolio1 {
-  background-image: url("../images/webdeveloper_peiwang_havetimedrinktea.png");
-  border: solid 2px var(--color1) groove;
-  background-size: cover;
-  background-position: center;
+.portfolio1, .portfolio2, .portfolio3, .portfolio4, .portfolio5 {
+background-size: cover;
+background-position: center;
+border-radius: 15px;
+border: groove  0.5rem var(--fontvintage);
+box-shadow: 5px 0 20px var(--bgcolordark);
 }
 
-/* .portfolio2 {
-  background-image: url("../images/02-portfolio-2.jpg");
-  border: solid 2px var(--color4) groove;
-} */
-
+.portfolio1 {
+  background-image: url("../images/webdeveloper_peiwang_teanamu_dot_com.jpg");
+}
 
 .portfolio2 {
-	background-image: url("data:image/svg+xml,%3Csvg id='10015.io' viewBox='0 0 480 480' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' %3E%3Cpath fill='%23548434' d='M391 273.5Q355 307 331.5 332Q308 357 274 378.5Q240 400 205.5 380Q171 360 140.5 337.5Q110 315 104.5 277.5Q99 240 104 202.5Q109 165 124 115.5Q139 66 189.5 48.5Q240 31 292 45.5Q344 60 337.5 123.5Q331 187 379 213.5Q427 240 391 273.5Z' /%3E%3C/svg%3E ");
- background-size: cover;
-
+	background-image: url("../images/webdeveloper_peiwang_tokei_applewatch_app.png");
 }
 
 .portfolio3 {
-  background-image: url("../images/02-portfolio-2.jpg");
-  border: solid 2px var(--color4) groove;
+  background-image: url("../images/webdeveloper_peiwang_potterySchool.png");
 }
 .portfolio4 {
-  background-image: url("../images/02-portfolio-2.jpg");
-  border: solid 2px var(--color4)  groove;
+  background-image: url("../images/webdeveloper_peiwang_patisseriesshop.png");
 }
 .portfolio5 {
-  background-image: url("../images/02-portfolio-2.jpg");
-  border: solid 2px var(--color4)  groove;
+  background-image: url("../images/webdeveloper_peiwang_mamebonsai.png");
 }
 
 .portfolio_flex {
@@ -448,6 +567,7 @@ header nav {
   text-decoration: none;
 }
 
+
 .footmsg {
   font-size: 1.5rem;
   top: 2rem;
@@ -457,14 +577,22 @@ header nav {
   color: var(--color5);
 }
 
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+
+
+/* using media queries to honour devices which prefer reduced motion */
   @media (prefers-reduced-motion: reduce) {
-    h2 {
+    header, #blob_container {
       animation: fade 0.5s ease-in both;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  /* A version for the desktop was designed first and then adapted to tablets and mobile screens using media queries  */
+  /* the breakpoint for typical tablet is 744px. However, the design of this page will break at around 805px*/
+  /*------------------------------
+   MEDIA QUERY for Tablets
+   -------------------------------*/
+
+  @media screen and (max-width: 805px) {
     /* on tablets, set columns to only be 50% of the width and not grow */
     .portfolio_flex_item {
       flex-basis: 100%; /* as opposed to calc(50% - 1em */
@@ -474,13 +602,314 @@ header nav {
     .portfolio_flex_item:first-child {
       min-height: 150px;
     }
+
+/* make mobile nav */
+header {
+  height: 60vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  background: var(--bgcolor);
+  /* display: flex;
+  align-items: center; */
+}
+
+
+header nav {
+z-index: 12;
+position: absolute;
+width: 100vw;
+top: 0;
+height: 7vh;
+margin: 0 auto;
+right: 0vw;
+text-align: center;
+opacity: 90%;
+background-color: var(--color7);
+}
+
+h1, h1.h1FN, h1.h1LM {
+top: 5vh;
+width: 100vw;
+padding-left: 3vw;
+font-size: 10vmin;
+}
+
+.name_tagline {
+margin: 0 auto;
+text-align: left;
+top: 4vh;
+width: 100vw;
+padding-left: 3vw;
+z-index: 15;
+}
+
+header p {
+font-size: 2rem;
+padding-top: 3vh;
+padding-left: 3vw;
+bottom: 10vh;
+z-index: 8;
+}
+
+h2 {
+font-size: 5vim;
+top: 5vh;
+margin: 0;
+padding: 0px;
+}
+
+h3 {
+font-size: 4.5vmin;
+font-weight: 800;
+}
+
+ul.topnavul {
+list-style-type: none;
+}
+
+ul.topnavul li.topnavli
+{
+font-size: 1.8rem;
+display: inline;
+padding: 0.5rem;
+margin: 0.5rem;
+}
+
+ul.topnavsmul li.topnavsmli
+{
+font-size: 3rem;
+display: inline;
+position: relative;
+right: -30vw;
+top: -1vh;
+}
+
+ul.topnavul li.topnavli a:hover, 
+ul.topnavul li.topnavli a:active,
+ul.topnavul li.topnavsmli a:hover, 
+ul.topnavul li.topnavsmli a:active {
+cursor: grab;
+color: var(--fontvintage);
+background-color: var(--color9);
+padding: 0.6rem;
+}
+
+ul.topnavul li.topnavli a:hover::before {
+content: none;
+}
+
+
+
+/* header blobs */
+
+.blob_container {
+display: flex;
+flex-direction: row;
+width: 100vw;
+}
+
+.blob {
+position: absolute;
+top: -60vh;
+left: -20vw;
+fill: var(--color7);
+width: 30vmax;
+z-index: 5;
+animation: move 10s ease-in-out infinite;
+transform-origin: 50% 50%;
+opacity: 90%
+}
+
+.blob3 {
+position: absolute;
+bottom: 70vh;
+left: 20vw;
+fill: var(--color7);
+width: 50vmax;
+z-index: 2;
+animation: move3 10s ease-in-out infinite;
+transform-origin: 30% 0%;
+opacity: 80%;
+}
+
+/* heading 2 orientation */
+
+.flex_item_left {
+display: flex;
+width: 20vw; 
+position: relative;
+top: 0;
+justify-content: flex-start;
+border: 0;
+margin: 0;
+padding-top: 2rem;
+padding-left: 5rem;
+border-right: solid  0.5rem var(--fontvintage);
+writing-mode: vertical-lr;
+text-orientation: mixed;
+}
+
+
   }
   
-  /* media query for larger screens */
+  /* MEDIA QUERY for smaller screens */
   @media screen and (max-width: 480px) {
-  .flex_items:first-child {
+
+
+  /* make first project double the size */
+    .flex_items:first-child {
     min-height: 300px;
     flex-basis: 100%;
   }
+
+  /* make mobile nav */
+  header {
+    height: 35vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background: var(--bgcolor);
+    /* display: flex;
+    align-items: center; */
+}
+
+
+header nav {
+  z-index: 12;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  height: 7vh;
+  margin: 0 auto;
+  right: 0vw;
+  text-align: center;
+  opacity: 90%;
+  background-color: var(--color7);
+}
+
+h1, h1.h1FN, h1.h1LM {
+  top: 5vh;
+  width: 100vw;
+  padding-left: 3vw;
+  font-size: 10vmin;
+}
+
+.name_tagline {
+  margin: 0 auto;
+  text-align: left;
+  top: 4vh;
+  width: 100vw;
+  padding-left: 3vw;
+  z-index: 15;
+}
+
+header p {
+  font-size: 2rem;
+  padding-top: 3vh;
+  padding-left: 3vw;
+  bottom: 10vh;
+  z-index: 8;
+}
+
+h2 {
+  font-size: 5vim;
+  top: 5vh;
+  margin: 0;
+  padding: 0px;
+}
+
+h3 {
+  font-size: 4.5vmin;
+  font-weight: 800;
+}
+
+ul.topnavul {
+  list-style-type: none;
+}
+
+ul.topnavul li.topnavli
+{
+  font-size: 1.8rem;
+  display: inline;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+ul.topnavsmul li.topnavsmli
+{
+  font-size: 3rem;
+  display: inline;
+  position: relative;
+  right: -30vw;
+  top: -1vh;
+}
+
+ul.topnavul li.topnavli a:hover, 
+ul.topnavul li.topnavli a:active,
+ul.topnavul li.topnavsmli a:hover, 
+ul.topnavul li.topnavsmli a:active {
+  cursor: grab;
+  color: var(--fontvintage);
+  background-color: var(--color9);
+  padding: 0.6rem;
+}
+
+ul.topnavul li.topnavli a:hover::before {
+  content: none;
+}
+
+
+
+/* header blobs */
+
+.blob_container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+ }
+
+ .blob {
+  position: absolute;
+  top: -60vh;
+  left: -20vw;
+  fill: var(--color7);
+  width: 30vmax;
+  z-index: 5;
+  animation: move 10s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  opacity: 90%
+}
+
+.blob3 {
+  position: absolute;
+  bottom: 70vh;
+  left: 20vw;
+  fill: var(--color7);
+  width: 50vmax;
+  z-index: 2;
+  animation: move3 10s ease-in-out infinite;
+  transform-origin: 30% 0%;
+  opacity: 80%;
+}
+
+/* heading 2 orientation */
+
+.flex_item_left {
+  display: flex;
+  width: 20vw; 
+  position: relative;
+  top: 0;
+  justify-content: flex-start;
+  border: 0;
+  margin: 0;
+  padding-top: 2rem;
+  padding-left: 5rem;
+  border-right: solid  0.5rem var(--fontvintage);
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+
   }
   
