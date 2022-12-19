@@ -9,11 +9,17 @@ Through this project, I have an opportunity to demonstrate my understanding of H
 
 I have learnt that I need to have an even more comprehensive wire-framing right down to the details of the naming for the major flex box containers, items and the transition of the webpage from a large screen to small(er) screens. I have also learnt the importance of understanding behaviours of different browsers as some of the animations did not work on Mac/iOS/iPadOS Safari browser nor did it work on iOS/iPadOS Chrome browser. I think this is extremely important for designing a responsive website with a target user in mind.
 
-This project takes the "mobile last" aproach as it is anticipated that recruiting agents are more likely to be using a laptop/desktop or a larger tablet than on a mobile.
+This project takes the "mobile last" approach as it is anticipated that recruiting agents are more likely to be using a laptop/desktop or a larger tablet than on a mobile.
 
-We were given 1 day less to complete this week's challenge owing to the pending Christmas break. So I had to manage my time properly. I also need further readings about accessibility in web design and browser compatibiliity.
+We were given 1 less day to complete this week's challenge owing to the pending Christmas break. So I had to manage my time properly. I also need further readings about accessibility in web design and browser compatibiliity.
 
 Other than the first project listed in the portfolio section of my webpage, the rest of the projects are al fictitious or website / apps that I would love to have made. 
+
+
+### Wireframe of this Portfolio Showcase Webpage
+
+![Wireframe image for this webpage](assets/images/wire_frame_peiwang_portfolio_webpage.png)
+
 
 
 ### Methodology
@@ -24,7 +30,7 @@ Other than the first project listed in the portfolio section of my webpage, the 
   ** how they will trasition from big screen to small screens and
   ** all the accessiblity issues relating to the webpage and all its transitions required for making the website responsive. 
 * Provide content for copy writings and images for the projects.
-* 
+
 
 
 ### Further Issues Requiring Attention
@@ -77,13 +83,13 @@ N.A.
 
 A screen shot of the submitted webpage:
 
-![alt text](assets/images/w02_challenge_portforlio_showcase.png)
+![Deployed Webpage screen dump](assets/images/w02_challenge_portforlio_showcase.png)
 
 
 
 ## Credits
 
-* All the images used are owned by me.
+* All images used on this web page are owned by me.
 * Used Font Awesome v4.7. [Link to Font Awesome](https://fontawesome.com).
 * Modified the code of the "CSS Only Morphing Blob" by Monica Dincule and used modified animation on this web page.
 
@@ -102,19 +108,16 @@ MIT License
 * Web page to showcase 
   ** my design aesthetic and knowledge of HTML/CSS
   ** my (future) project porfolio 
+* As the header section includes some css animation, I've added @media (prefers-reduced-motion: reduce) to honour devices with reduced motion settings.
 	
 
 	
 	
 ## Testing
 
-The new webpage has been assessed against 
+The new webpage will be assessed against download speed and accessibility at a later date. 
 
-* Download speed 
-	* 
-	
-* Accessibility
-	* 
+
 
 ---
 
