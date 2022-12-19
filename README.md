@@ -82,10 +82,27 @@ N.A.
 
 ## Usage 
 
-A screen shot of the submitted webpage:
+A screen shots of the submitted webpage on different screen sizes:
 
-![Deployed Webpage screen dump](assets/images/w02_challenge_portforlio_showcase.png)
+### Desktop Screen
 
+![Deployed Webpage screen dump for big screen top](assets/images/screenshot_big_top.png)
+
+![Deployed Webpage screen dump for big screen middle](assets/images/screenshot_big_middle.png)
+
+
+### Tablets Screen
+
+![Deployed Webpage screen dump for tablet screen top](assets/images/screenshot_medium_top.png)
+
+![Deployed Webpage screen dump for tablet screen middle](assets/images/screenshot_medium_middle.png)
+
+
+### Mobile Screem
+
+![Deployed Webpage screen dump for mobile screen top](assets/images/screenshot_small_top.png)
+
+![Deployed Webpage screen dump for mobile  screen middle](assets/images/screenshot_small_middle.png)
 
 
 ## Credits
