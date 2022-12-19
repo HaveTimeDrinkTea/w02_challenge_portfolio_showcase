@@ -125,6 +125,8 @@ MIT License
   ** my design aesthetic and knowledge of HTML/CSS
   ** my (future) project porfolio 
 * As the header section includes some css animation, I've added @media (prefers-reduced-motion: reduce) to honour devices with reduced motion settings.
+* CSS animations in the header section (does not work on macOS Ventura / iPaadOs / iOS safari).  Tested and worked in Google Chrome
+* CSS animation in profile avatar in the contact me section.
 	
 
 	
