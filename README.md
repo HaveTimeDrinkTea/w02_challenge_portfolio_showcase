@@ -35,10 +35,11 @@ Other than the first project listed in the portfolio section of my webpage, the 
 
 ### Further Issues Requiring Attention
 
-* Update all the links.
+* Update all the links with real links.
 * Implement cookie consent and check compliance with GDPR.
 * Create the script(s) need to collect email leads from the contact me section.
 * Smooth out the current transition from larger screens to smaller screen vice versa.
+* Use of svg image animation in different browsers.
 
 
 
