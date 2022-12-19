@@ -1,3 +1,9 @@
+  /* ===============================================================
+  
+  Environmental settiings
+  
+  =============================================================== */
+
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
     --bgcolor:#666666;
@@ -25,6 +31,12 @@
 
   @import url('https://fonts.googleapis.com/css?family=Poppins:700');
 
+  /* ===============================================================
+   
+    HTML Element settings
+
+    =============================================================== */
+
   * {
     box-sizing: border-box;
   }
@@ -45,8 +57,7 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
-
-  header {
+header {
     height: 70vh;
     width: 100vw;
     overflow: hidden;
@@ -123,18 +134,22 @@ header nav {
     font-size: 0.8rem;
   }
   
+
+  p {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
   header p {
     font-size: 2.5rem;
     padding-left: 5rem;
     z-index: 8;
   }
 
-
-  p {
-    margin: 0;
-    font-size: 2rem;
+  main {
+    width: 96%;
+    margin: 2rem auto;
   }
-
   
   a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
@@ -168,7 +183,6 @@ header nav {
     background-color: var(--color9);
     padding-right: 10px;
   }
-  
  
   ul.topnavsmul li.topnavsmli a:active {
     display: inline;
@@ -183,12 +197,6 @@ header nav {
     padding-right: 5px;
     padding-left: 10px
   }
-
-  main {
-    width: 96%;
-    margin: 2rem auto;
-  }
-  
 
 
   footer {
@@ -241,6 +249,13 @@ header nav {
     padding-right: 10rem;
     padding-left: 10rem;
   }
+
+  /* ===============================================================
+   
+    Class and ID settings
+
+    =============================================================== */
+
 /* header css animation */
 
 .blob_container {
@@ -463,9 +478,6 @@ form {
   opacity: 1;
 }
 
-
-
-
 .disclaimer {
   font-size: 0.7em;
   margin: 0;
@@ -578,7 +590,12 @@ box-shadow: 5px 0 20px var(--bgcolordark);
 }
 
 
+  /* ===============================================================
+   
+    Media Queries for various screen sizes
 
+    =============================================================== */
+    
 /* using media queries to honour devices which prefer reduced motion */
   @media (prefers-reduced-motion: reduce) {
     header, #blob_container {
