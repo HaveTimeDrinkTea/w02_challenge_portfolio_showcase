@@ -92,6 +92,7 @@ A screen shot of the submitted webpage:
 
 * All images used on this web page are owned by me.
 * Used Font Awesome v4.7. [Link to Font Awesome](https://fontawesome.com).
+* Webpage colour scheme RGB take from [Link to site](http://khroma.co/generator/).
 * Modified the code of the "CSS Only Morphing Blob" by Monica Dincule and used modified animation on this web page.
 
 ![CSS Only Morphing Blob Demo](https://codepen.io/notwaldorf/pen/omXwzw)
