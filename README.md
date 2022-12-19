@@ -13,7 +13,7 @@ This project takes the "mobile last" approach as it is anticipated that recruiti
 
 We were given 1 less day to complete this week's challenge owing to the pending Christmas break. So I had to manage my time properly. I also need further readings about accessibility in web design and browser compatibiliity.
 
-Other than the first project listed in the portfolio section of my webpage, the rest of the projects are al fictitious or website / apps that I would love to have made. 
+Other than the first project listed in the portfolio section of my webpage, the rest of the projects are all fictitious or website / apps that I would love to have made. 
 
 
 ### Wireframe of this Portfolio Showcase Webpage
