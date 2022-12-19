@@ -49,8 +49,7 @@ AS A new frontend developer
 I WANT an online portfolio that follows accessibility standards and SEO
 SO THAT potential hiring agents can look at previous work and be impressed enough to contact me.
 
-[Deployment link](https://havetimedrinktea.github.io/w02_challenge_portforlio_showcase/)
-
+[Deployment link](https://havetimedrinktea.github.io/w02_challenge_portfolio_showcase/)
 
 
 ## Acceptance Criteria
